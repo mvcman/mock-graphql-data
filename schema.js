@@ -29,17 +29,39 @@ type Leave {
     apshort: String
     org: String 
 }
+input CreateUserInput {
+    id: Int
+    name: String
+    age: Int
+    email: String
+    friends: [Int]
+}
+input CreateLeave {
+    name: String
+    reason: String
+    date: String
+}
+
+type CreatedMsg {
+    msg: String
+}
 
 type Query {
-    users: [User],
+    users(username: String): [User],
     persons: [Person],
     leaves: [Leave]
+}
+
+type Mutation {
+    createUser(input: CreateUserInput!): User
+    createLeave(input: CreateLeave): CreatedMsg
 }
 `
 
 export const resolvers = {
   Query: {
-    users() {
+    users(user) {
+        console.log(user);
         return userModel.userList()
     },
     persons: () => {
@@ -48,5 +70,25 @@ export const resolvers = {
     leaves: () => {
         return userModel.leaveList()
     },
+  },
+
+  Mutation: {
+    createUser(source, args) {
+      console.log("first", args);
+      return userModel.create(args)
+    },
+    createLeave(source, args) {
+      console.log(args);
+      return userModel.createLeave(args)
+    },
   }
+//  Mutation: {
+//    createLeave(source, args) {
+//        console.log(args.name, args.reason);
+//        return {
+//            msg: "Added success!"
+//        }
+//        //return userModel.createLeave(leave)
+//    },
+//  }
 }

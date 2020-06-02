@@ -1,211 +1,368 @@
 {
-    "users": [
-      {
-        "id": 0,
-        "age": 31,
-        "name": "Peck Montoya",
-        "email": "peckmontoya@qualitex.com",
-        "friends": [
-          {
-            "id": 1
-          },
-          {
-            "id": 2
-          }
-        ]
-      },
-      {
-        "id": 1,
-        "age": 36,
-        "name": "Renee Herman",
-        "email": "reneeherman@qualitex.com",
-        "friends": [
-          {
-            "id": 0
-          },
-          {
-            "id": 2
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "age": 23,
-        "name": "Sheena Madden",
-        "email": "sheenamadden@qualitex.com",
-        "friends": [
-          {
-            "id": 0
-          },
-          {
-            "id": 1
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "age": 22,
-        "name": "Shari Justice",
-        "email": "sharijustice@qualitex.com",
-        "friends": [
-          {
-            "id": 4
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "age": 38,
-        "name": "Eaton Horton",
-        "email": "eatonhorton@qualitex.com",
-        "friends": [
-          {
-            "id": 3
-          }
-        ]
-      },
-      {
-        "id": 5,
-        "age": 18,
-        "name": "Lois Best",
-        "email": "loisbest@qualitex.com",
-        "friends": [
-          {
-            "id": 6
-          },
-          {
-            "id": 7
-          },
-          {
-            "id": 8
-          },
-          {
-            "id": 9
-          }
-        ]
-      },
-      {
-        "id": 6,
-        "age": 40,
-        "name": "Schroeder Stafford",
-        "email": "schroederstafford@qualitex.com",
-        "friends": [
-          {
-            "id": 5
-          }
-        ]
-      },
-      {
-        "id": 7,
-        "age": 33,
-        "name": "Hanson Collins",
-        "email": "hansoncollins@qualitex.com",
-        "friends": [
-          {
-            "id": 5
-          }
-        ]
-      },
-      {
-        "id": 8,
-        "age": 21,
-        "name": "Walton York",
-        "email": "waltonyork@qualitex.com",
-        "friends": [
-          {
-            "id": 5
-          }
-        ]
-      },
-      {
-        "id": 9,
-        "age": 38,
-        "name": "Walter Manning",
-        "email": "waltermanning@qualitex.com",
-        "friends": [
-          {
-            "id": 5
-          },
-          {
-            "id": 10
-          }
-        ]
-      },
-      {
-        "id": 10,
-        "age": 26,
-        "name": "Carmen Butler",
-        "email": "carmenbutler@qualitex.com",
-        "friends": [
-          {
-            "id": 9
-          }
-        ]
-      },
-      {
+  "users": [
+    {
+      "id": 0,
+      "age": 31,
+      "name": "Peck Montoya",
+      "email": "peckmontoya@qualitex.com",
+      "friends": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "age": 36,
+      "name": "Renee Herman",
+      "email": "reneeherman@qualitex.com",
+      "friends": [
+        {
+          "id": 0
+        },
+        {
+          "id": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "age": 23,
+      "name": "Sheena Madden",
+      "email": "sheenamadden@qualitex.com",
+      "friends": [
+        {
+          "id": 0
+        },
+        {
+          "id": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "age": 22,
+      "name": "Shari Justice",
+      "email": "sharijustice@qualitex.com",
+      "friends": [
+        {
+          "id": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "age": 38,
+      "name": "Eaton Horton",
+      "email": "eatonhorton@qualitex.com",
+      "friends": [
+        {
+          "id": 3
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "age": 18,
+      "name": "Lois Best",
+      "email": "loisbest@qualitex.com",
+      "friends": [
+        {
+          "id": 6
+        },
+        {
+          "id": 7
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 9
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "age": 40,
+      "name": "Schroeder Stafford",
+      "email": "schroederstafford@qualitex.com",
+      "friends": [
+        {
+          "id": 5
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "age": 33,
+      "name": "Hanson Collins",
+      "email": "hansoncollins@qualitex.com",
+      "friends": [
+        {
+          "id": 5
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "age": 21,
+      "name": "Walton York",
+      "email": "waltonyork@qualitex.com",
+      "friends": [
+        {
+          "id": 5
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "age": 38,
+      "name": "Walter Manning",
+      "email": "waltermanning@qualitex.com",
+      "friends": [
+        {
+          "id": 5
+        },
+        {
+          "id": 10
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "age": 26,
+      "name": "Carmen Butler",
+      "email": "carmenbutler@qualitex.com",
+      "friends": [
+        {
+          "id": 9
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Indigo Montoya",
+      "age": 31,
+      "email": "indigomontoya@gmail.com",
+      "friends": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        }
+      ]
+    },
+    {
+      "input": {
         "id": 13,
-        "name": "Indigo Montoya",
-        "age": 31,
+        "name": "Mandar Montoya",
+        "age": 29,
         "email": "indigomontoya@gmail.com",
         "friends": [
-          {
-            "id": 1
-          },
-          {
-            "id": 2
-          }
+          1,
+          2
         ]
-      }
-    ],
-    "leaves": [
-        {
-            "image": "/avatars/avatar_11.png",
-            "badgeName": "Paid time off",
-            "name": "Snehal Narkar",
-            "count": 4,
-            "from": "December 2, 2019",
-            "to": "December 5, 2019",
-            "reason": "sample",
-            "approvername": "Pradnya Dalvi",
-            "org": "xyz"
-        },
-        {
-            "image": "/avatars/avatar_2.png",
-            "badgeName": "Sick Leave",
-            "name": "Pradnya Dalvi",
-            "count": 4,
-            "from": "December 12, 2019",
-            "to": "December 15, 2019",
-            "reason": "Not well",
-            "approvername": "Snehal Narkar",
-            "apshort": "SN",
-            "org": "udgama"
-        }
-    ],
-    "people": [
-        {
-            "name": "Akshata",
-            "image": "/avatars/avatar_1.png"
-        },
-        {
-            "name": "Pradnya",
-            "image": "/avatars/avatar_2.png"
-        },
-        {
-            "name": "Snehal",
-            "image": "/avatars/avatar_3.png"
-        },
-        {
-            "name": "Shreya",
-            "image": "/avatars/avatar_4.png"
-        },
-        {
-            "name": "Shradha",
-            "image": "/avatars/avatar_5.png"
-        },
-        {
-            "name": "Aniket",
-            "image": "/avatars/avatar_6.png"
-        }
-    ]
-  }
+      },
+      "friends": [],
+      "id": 14
+    },
+    {
+      "input": {
+        "id": 13,
+        "name": "Mandar Montoya",
+        "age": 29,
+        "email": "indigomontoya@gmail.com",
+        "friends": [
+          1,
+          2
+        ]
+      },
+      "friends": [],
+      "id": 15
+    },
+    {
+      "input": {
+        "id": 13,
+        "name": "Mandar Montoya",
+        "age": 29,
+        "email": "indigomontoya@gmail.com",
+        "friends": [
+          1,
+          2
+        ]
+      },
+      "friends": [],
+      "id": 16
+    },
+    {
+      "input": {
+        "id": 13,
+        "name": "Mandar Montoya",
+        "age": 29,
+        "email": "indigomontoya@gmail.com",
+        "friends": [
+          1,
+          2
+        ]
+      },
+      "friends": [],
+      "id": 17
+    },
+    {
+      "input": {
+        "id": 13,
+        "name": "Mandar Montoya",
+        "age": 29,
+        "email": "indigomontoya@gmail.com",
+        "friends": [
+          1,
+          2
+        ]
+      },
+      "friends": [],
+      "id": 18
+    },
+    {
+      "input": {
+        "id": 13,
+        "name": "Mandar Montoya",
+        "age": 29,
+        "email": "indigomontoya@gmail.com",
+        "friends": [
+          1,
+          2
+        ]
+      },
+      "friends": [],
+      "id": 19
+    },
+    {
+      "id": 20
+    }
+  ],
+  "leave": [
+    {
+      "id": 1,
+      "name": "abc",
+      "reason": "abc"
+    },
+    {
+      "input": {
+        "name": "mandar",
+        "reason": "Leave grant",
+        "date": "25/3/2020"
+      },
+      "id": 2
+    },
+    {
+      "name": "mandar",
+      "reason": "Leave grant",
+      "date": "25/3/2020",
+      "id": 3
+    },
+    {
+      "name": "mandar",
+      "reason": "Leave grant",
+      "date": "25/3/2020",
+      "id": 4
+    },
+    {
+      "name": "mandar",
+      "reason": "Leave grant",
+      "date": "25/3/2020",
+      "id": 5
+    },
+    {
+      "name": "mandar",
+      "reason": "Leave grant",
+      "date": "25/3/2020",
+      "id": 6
+    },
+    {
+      "name": "mandar",
+      "reason": "Leave grant",
+      "date": "25/3/2020",
+      "id": 7
+    },
+    {
+      "name": "mandar",
+      "reason": "Leave grant",
+      "date": "25/3/2020",
+      "id": 8
+    },
+    {
+      "name": "mandar",
+      "reason": "Leave grant",
+      "date": "25/3/2020",
+      "id": 9
+    },
+    {
+      "name": "mandar",
+      "reason": "Leave grant",
+      "date": "25/3/2020",
+      "id": 10
+    },
+    {
+      "name": "Shraddha",
+      "reason": "fgfhhg",
+      "date": "7",
+      "id": 11
+    }
+  ],
+  "leaves": [
+    {
+      "image": "/avatars/avatar_11.png",
+      "badgeName": "Paid time off",
+      "name": "Snehal Narkar",
+      "count": 4,
+      "from": "December 2, 2019",
+      "to": "December 5, 2019",
+      "reason": "sample",
+      "approvername": "Pradnya Dalvi",
+      "org": "xyz"
+    },
+    {
+      "image": "/avatars/avatar_2.png",
+      "badgeName": "Sick Leave",
+      "name": "Pradnya Dalvi",
+      "count": 4,
+      "from": "December 12, 2019",
+      "to": "December 15, 2019",
+      "reason": "Not well",
+      "approvername": "Snehal Narkar",
+      "apshort": "SN",
+      "org": "udgama"
+    }
+  ],
+  "people": [
+    {
+      "name": "Akshata",
+      "image": "/avatars/avatar_1.png"
+    },
+    {
+      "name": "Pradnya",
+      "image": "/avatars/avatar_2.png"
+    },
+    {
+      "name": "Snehal",
+      "image": "/avatars/avatar_3.png"
+    },
+    {
+      "name": "Shreya",
+      "image": "/avatars/avatar_4.png"
+    },
+    {
+      "name": "Shradha",
+      "image": "/avatars/avatar_5.png"
+    },
+    {
+      "name": "Aniket",
+      "image": "/avatars/avatar_6.png"
+    }
+  ],
+  "settings": {}
+}
