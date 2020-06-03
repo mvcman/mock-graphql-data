@@ -16,6 +16,23 @@ type Person {
     companyName: String
     image: String
 }
+
+type Label {
+    value: String
+    label: String
+}
+
+type DateLabel {
+    value: Int
+    label: String
+}
+
+type GeneralSettings {
+    transferOptions: [Label]
+    months: [Label]
+    days: [DateLabel]
+    dateFormat: [Label]
+}
 type Leave {
     name: String
     image: String
@@ -46,10 +63,24 @@ type CreatedMsg {
     msg: String
 }
 
+type TeamName {
+    name: String
+}
 type Query {
-    users(username: String): [User],
-    persons: [Person],
+    users(username: String): [User]
+    persons: [Person]
     leaves: [Leave]
+    transferOptions: [Label]
+    months: [Label]
+    days: [DateLabel]
+    dateFormat: [Label]
+    teamOptions: [String]
+    statusOptions: [Label]
+    reportOptions: [Label]
+    allcountry: [Label]
+    channels: [Label]
+    weekdays: [Label]
+    user(id: ID!): User
 }
 
 type Mutation {
@@ -64,12 +95,51 @@ export const resolvers = {
         console.log(user);
         return userModel.userList()
     },
+    user(source, id) {
+        console.log(id);
+        return userModel.singleUser(id)
+    },
     persons: () => {
         return userModel.personList()
     },
     leaves: () => {
         return userModel.leaveList()
     },
+
+    transferOptions: () => {
+        return userModel.transferOptions()
+    },
+
+    months: () => {
+        return userModel.months()
+    },
+
+    days: () => {
+        return userModel.days()
+    },
+
+    dateFormat: () => {
+        return userModel.dateFormat()
+    },
+    
+    teamOptions: () => {
+        return userModel.teamOptions()
+    },
+    reportOptions: () => {
+        return userModel.reportOptions()
+    },
+    statusOptions: () => {
+        return userModel.statusOptions()
+    },
+    allcountry: () => {
+        return userModel.country()
+    },
+    channels: () => {
+        return userModel.channels()
+    },
+    weekdays: () => {
+        return userModel.weekdays()
+    }
   },
 
   Mutation: {

@@ -311,6 +311,24 @@
       "reason": "fgfhhg",
       "date": "7",
       "id": 11
+    },
+    {
+      "name": "Pradnya",
+      "reason": "fsasfsfa",
+      "date": "",
+      "id": 12
+    },
+    {
+      "name": "Shraddha",
+      "reason": "afaf afasf",
+      "date": "8",
+      "id": 13
+    },
+    {
+      "name": "Pradnya",
+      "reason": "abccddddd ",
+      "date": "",
+      "id": 14
     }
   ],
   "leaves": [
@@ -364,5 +382,129 @@
       "image": "/avatars/avatar_6.png"
     }
   ],
-  "settings": {}
+"transferOptions": [
+    {
+        "value": "Yes, all remaining days",
+        "label": "Yes, all remaining days"
+    },
+    {
+        "value": "some",
+        "label": "some"
+    }
+],
+"months": [
+    {
+        "value": "May",
+        "label": "May"
+    },
+    {
+        "value": "January",
+        "label": "Jan"
+    },
+    {
+        "value": "December",
+        "label": "Dec"
+    }
+],
+"days": [
+    {
+        "value": 1,
+        "label": "1"
+    },
+    {
+        "value": 2,
+        "label": "2"
+    },
+    {
+        "value": 3,
+        "label": "3"
+    }
+],
+"dateFormat": [
+    {
+        "label": "DD/MM/YYYY",
+        "value": "DD/MM/YYYY"
+    },
+    {
+        "label": "YYYY/MM/DD",
+        "value": "YYYY/MM/DD"
+    }
+],
+"reportOptions": [
+    {
+        "value": "Leave history report",
+        "label": "Leave history report"
+    },
+    {
+        "value": "Employee leave statuses",
+        "label": "Employee leave statuses"
+    }
+  ],
+"teamOptions": [
+    "XYZ", "Udgama","Abc"
+  ],
+"statusOptions": [
+    {
+        "value": "Approved",
+        "label": "Approved"
+    },
+    {
+        "value": "Denied",
+        "label": "Denied"
+    },
+    {
+        "value": "Approved & Denied",
+        "label": "Approved & Denied"
+    }
+  ],
+  "channels": [
+    {
+        "label": "udgama",
+        "value": "udgama"
+    },
+    {
+        "label": "xyz",
+        "value": "xyz"
+    }
+  ],
+  "weekdays": [
+    {
+        "label": "Sunday",
+        "value": "sunday"
+    },
+    {
+        "label": "Monday",
+        "value": "Monday"
+    },
+    {
+        "label": "Tuesday",
+        "value": "Tuesday"
+    },
+    {
+        "label": "Wednesday",
+        "value": "Wednesday"
+    },
+    {
+        "label": "Thursday",
+        "value": "Thursday"
+    },
+    {
+        "label": "Friday",
+        "value": "friday"
+    },
+    {
+        "label": "Saturday",
+        "value": "saturday"
+    }
+  ],
+  "allcountry": [
+    {
+        "value": "India",
+        "label": "India"
+    },
+    {
+        "value": "US",
+        "label": "Us"
+    }
+  ]
 }
