@@ -59,12 +59,65 @@ input CreateLeave {
     date: String
 }
 
-type CreatedMsg {
+type Msg {
     msg: String
 }
 
 type TeamName {
     name: String
+}
+type Holliday {
+    name: String
+    date: String
+}
+
+type Holy {
+    id: ID!
+    data: [Holliday]
+}
+input AddLeaveType {
+    name: String
+    type: String
+    active: Boolean
+    DPY: Int
+    AR: String
+    RR: String
+    AHD: String
+}
+
+input CustomLeaveType {
+    id: ID!
+    name: String
+    type: String
+    active: Boolean
+    DPY: Int
+    AR: String
+    RR: String
+    AHD: String
+}
+
+input PaidLeaveType {
+    id: ID!
+    name: String
+    active: Boolean
+    DPY: Int
+    AR: String
+}
+
+type LeaveType {
+    id: ID!
+    name: String
+    type: String
+    active: Boolean
+    DPY: Int
+    AR: String
+    RR: String
+    AHD: String
+}
+
+type Data {
+    msg: String
+    data: LeaveType
 }
 type Query {
     users(username: String): [User]
@@ -81,11 +134,18 @@ type Query {
     channels: [Label]
     weekdays: [Label]
     user(id: ID!): User
+    holliday(id: ID!): Holy
+    getLeave: [LeaveType],
+    getPaidLeave: [LeaveType]
+    deleteLeave(id: ID!): Msg
 }
 
 type Mutation {
     createUser(input: CreateUserInput!): User
-    createLeave(input: CreateLeave): CreatedMsg
+    createLeave(input: CreateLeave): Msg
+    updateCustomLeave(input: CustomLeaveType): Msg
+    updatePaidLeave(input: PaidLeaveType): Msg
+    addCustomLeaves(input: AddLeaveType): Data
 }
 `
 
@@ -139,6 +199,19 @@ export const resolvers = {
     },
     weekdays: () => {
         return userModel.weekdays()
+    },
+    holliday(source, args) {
+        console.log(args);
+        return userModel.getHolliday(args)
+    },
+    getLeave: () => {
+        return userModel.getLeaveCustom()
+    },
+    getPaidLeave: () => {
+        return userModel.getLeavePaid()
+    },
+    deleteLeave(source, args) {
+        return userModel.deleteLeave(args);
     }
   },
 
@@ -150,6 +223,18 @@ export const resolvers = {
     createLeave(source, args) {
       console.log(args);
       return userModel.createLeave(args)
+    },
+    addCustomLeaves(source, args) {
+        console.log(args.name, args.reason);
+        return userModel.addCustomLeave(args.input)
+    },
+    updateCustomLeave(source, args) {
+        console.log(args.name, args.reason);
+        return userModel.updateCustomLeave(args.input)
+    },
+    updatePaidLeave(source, args) {
+        console.log(args.name, args.reason);
+        return userModel.updatePaidLeave(args.input)
     },
   }
 //  Mutation: {

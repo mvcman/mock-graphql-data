@@ -84,6 +84,97 @@ class User {
     .then(res => res)
     .catch(err => console.log(err));
   }
+
+  getHolliday(args) {
+    console.log(args.id)
+    return this.api.get(`/holliday/${args.id}`).then(res => res.data)
+    .then(res => res)
+    .catch(err => console.log(err));
+  }
+
+  getLeaveCustom() {
+    return this.api.get('/leaveTypesCustom').then(res => res.data)
+    .then(res => res)
+    .catch(err => console.log(err));
+  }
+
+  getLeavePaid() {
+    return this.api.get('/leaveTypesPaid').then(res => res.data)
+    .then(res => res)
+    .catch(err => console.log(err));
+  }
+
+  async addCustomLeave(args) {
+    console.log(args);
+    const d = await this.api.post(`/leaveTypesCustom`, args);
+    console.log(d.data);
+    if (d.status === 200 || d.status === 201){
+        return {
+            msg: "Leave added successfuly!",
+            data: d.data
+        }
+    }
+    return {
+        msg: "Something went wrong!"
+    }
+  }
+
+  async deleteLeave(args) {
+      const data = await this.api.delete(`/leaveTypesCustom/${args.id}`);
+      console.log(data);
+        if (data.status === 200 ){
+            return {
+                msg: "Item deleted successfuly!",
+            }
+        }
+        return {
+            msg: "Something went wrong!"
+        }
+  }
+
+  async updateCustomLeave(args) {
+      console.log(args);
+    const data = await this.api.put(`/leaveTypesCustom/${args.id}`, {
+        id: args.id,
+        name: args.name,
+        active: args.active,
+        type: args.type,
+        DPY: args.DPY,
+        AR: args.AR,
+        RR: args.RR,
+        AHD: args.AHD
+    });
+    console.log(data);
+      if (data.status === 200 ){
+          return {
+              msg: "Item Updated successfuly!",
+          }
+      }
+      return {
+          msg: "Something went wrong!"
+      }
+    }
+
+    async updatePaidLeave(args) {
+        console.log(args);
+      const data = await this.api.put(`/leaveTypesPaid/${args.id}`, {
+          id: args.id,
+          name: args.name,
+          active: args.active,
+          DPY: args.DPY,
+          AR: args.AR,
+      });
+      console.log(data);
+        if (data.status === 200 ){
+            return {
+                msg: "Item Updated successfuly!",
+            }
+        }
+        return {
+            msg: "Something went wrong!"
+        }
+    }
+
   async create(data) {
     console.log("My users data ", data);
     //data.friends = data.friends 
@@ -92,7 +183,7 @@ class User {
   
     const data1 = await this.api.post('/users', data.input);
     console.log(data1);
-    if (data1.status === '200' || data.status === '201'){
+    if (data1.status === 200 || data.status === 201){
         return {
             msg: "User created successfuly!",
             data: data1.data
@@ -118,4 +209,4 @@ class User {
   }
 }
 
-export default new User();;
+export default new User();

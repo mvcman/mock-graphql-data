@@ -382,129 +382,220 @@
       "image": "/avatars/avatar_6.png"
     }
   ],
-"transferOptions": [
+  "transferOptions": [
     {
-        "value": "Yes, all remaining days",
-        "label": "Yes, all remaining days"
+      "value": "Yes, all remaining days",
+      "label": "Yes, all remaining days"
     },
     {
-        "value": "some",
-        "label": "some"
-    }
-],
-"months": [
-    {
-        "value": "May",
-        "label": "May"
-    },
-    {
-        "value": "January",
-        "label": "Jan"
-    },
-    {
-        "value": "December",
-        "label": "Dec"
-    }
-],
-"days": [
-    {
-        "value": 1,
-        "label": "1"
-    },
-    {
-        "value": 2,
-        "label": "2"
-    },
-    {
-        "value": 3,
-        "label": "3"
-    }
-],
-"dateFormat": [
-    {
-        "label": "DD/MM/YYYY",
-        "value": "DD/MM/YYYY"
-    },
-    {
-        "label": "YYYY/MM/DD",
-        "value": "YYYY/MM/DD"
-    }
-],
-"reportOptions": [
-    {
-        "value": "Leave history report",
-        "label": "Leave history report"
-    },
-    {
-        "value": "Employee leave statuses",
-        "label": "Employee leave statuses"
+      "value": "some",
+      "label": "some"
     }
   ],
-"teamOptions": [
-    "XYZ", "Udgama","Abc"
+  "months": [
+    {
+      "value": "May",
+      "label": "May"
+    },
+    {
+      "value": "January",
+      "label": "Jan"
+    },
+    {
+      "value": "December",
+      "label": "Dec"
+    }
   ],
-"statusOptions": [
+  "days": [
     {
-        "value": "Approved",
-        "label": "Approved"
+      "value": 1,
+      "label": "1"
     },
     {
-        "value": "Denied",
-        "label": "Denied"
+      "value": 2,
+      "label": "2"
     },
     {
-        "value": "Approved & Denied",
-        "label": "Approved & Denied"
+      "value": 3,
+      "label": "3"
+    }
+  ],
+  "dateFormat": [
+    {
+      "label": "DD/MM/YYYY",
+      "value": "DD/MM/YYYY"
+    },
+    {
+      "label": "YYYY/MM/DD",
+      "value": "YYYY/MM/DD"
+    }
+  ],
+  "reportOptions": [
+    {
+      "value": "Leave history report",
+      "label": "Leave history report"
+    },
+    {
+      "value": "Employee leave statuses",
+      "label": "Employee leave statuses"
+    }
+  ],
+  "teamOptions": [
+    "XYZ",
+    "Udgama",
+    "Abc"
+  ],
+  "statusOptions": [
+    {
+      "value": "Approved",
+      "label": "Approved"
+    },
+    {
+      "value": "Denied",
+      "label": "Denied"
+    },
+    {
+      "value": "Approved & Denied",
+      "label": "Approved & Denied"
     }
   ],
   "channels": [
     {
-        "label": "udgama",
-        "value": "udgama"
+      "label": "udgama",
+      "value": "udgama"
     },
     {
-        "label": "xyz",
-        "value": "xyz"
+      "label": "xyz",
+      "value": "xyz"
     }
   ],
   "weekdays": [
     {
-        "label": "Sunday",
-        "value": "sunday"
+      "label": "Sunday",
+      "value": "sunday"
     },
     {
-        "label": "Monday",
-        "value": "Monday"
+      "label": "Monday",
+      "value": "Monday"
     },
     {
-        "label": "Tuesday",
-        "value": "Tuesday"
+      "label": "Tuesday",
+      "value": "Tuesday"
     },
     {
-        "label": "Wednesday",
-        "value": "Wednesday"
+      "label": "Wednesday",
+      "value": "Wednesday"
     },
     {
-        "label": "Thursday",
-        "value": "Thursday"
+      "label": "Thursday",
+      "value": "Thursday"
     },
     {
-        "label": "Friday",
-        "value": "friday"
+      "label": "Friday",
+      "value": "friday"
     },
     {
-        "label": "Saturday",
-        "value": "saturday"
+      "label": "Saturday",
+      "value": "saturday"
     }
   ],
   "allcountry": [
     {
-        "value": "India",
-        "label": "India"
+      "value": "India",
+      "label": "India"
     },
     {
-        "value": "US",
-        "label": "Us"
+      "value": "US",
+      "label": "Us"
+    }
+  ],
+  "leaveTypesPaid": [
+    {
+      "id": 1,
+      "name": "",
+      "active": true,
+      "DPY": 0,
+      "AR": "No"
+    }
+  ],
+  "leaveTypesCustom": [
+    {
+      "id": 1,
+      "name": "Casual Leaves",
+      "active": false,
+      "type": "Casual Leaves",
+      "DPY": 0,
+      "AR": "Yes",
+      "RR": "No",
+      "AHD": "No"
+    },
+    {
+      "id": 2,
+      "name": "Sick day",
+      "active": false,
+      "type": "Sick day",
+      "DPY": 0,
+      "AR": "Yes",
+      "RR": "No",
+      "AHD": "No"
+    },
+    {
+      "id": 3,
+      "name": "diwali leave",
+      "active": false,
+      "type": "diwali leave",
+      "DPY": 2,
+      "AR": "Yes",
+      "RR": "No",
+      "AHD": "No"
+    },
+    {
+      "id": 4,
+      "name": "Diwali",
+      "active": false,
+      "type": "Diwali",
+      "DPY": 0,
+      "AR": "Yes",
+      "RR": "No",
+      "AHD": "No"
+    },
+    {
+      "name": "Pizza party",
+      "type": "Pizza party",
+      "active": true,
+      "DPY": 2,
+      "AR": "Yes",
+      "RR": "No",
+      "AHD": "No",
+      "id": 5
+    }
+  ],
+  "holliday": [
+    {
+      "id": 2020,
+      "data": [
+        {
+          "name": "abc",
+          "date": "25/3/2020"
+        },
+        {
+          "name": "abc1",
+          "date": "25/5/2020"
+        }
+      ]
+    },
+    {
+      "id": 2021,
+      "data": [
+        {
+          "name": "abcdefea",
+          "date": "25/2/2021"
+        },
+        {
+          "name": "abc1dffa",
+          "date": "25/3/2021"
+        }
+      ]
     }
   ]
 }
