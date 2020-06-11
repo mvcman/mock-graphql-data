@@ -532,9 +532,9 @@
     {
       "id": 2,
       "name": "Diwali Vacation",
-      "active": false,
+      "active": true,
       "type": "Diwali Vacation",
-      "DPY": 0,
+      "DPY": 6,
       "AR": "Yes",
       "RR": "No",
       "AHD": "No"
@@ -587,8 +587,8 @@
       "allowSlack": true,
       "transfer": "Yes, all remaining days",
       "daysExpire": true,
-      "month": "May",
-      "date": "1"
+      "month": "January",
+      "date": "2"
     }
   ],
   "workweeks": [
@@ -607,51 +607,47 @@
   "export": [
     {
       "id": 1,
-      "org_id": 1,
-      "reportType": "Leave history event",
-      "status": "Denied",
-      "startDate": "2020/06/02",
-      "endDate": "2021/05/31",
+      "org_id": "1",
+      "reportType": "Employee leave statuses",
+      "status": "Approved",
+      "startDate": "undefined",
+      "endDate": "undefined",
       "teams": [
-        {
-            "name": "abc"
-        },
-        {
-            "name": "xyz"
-        }
+        "Udgama,XYZ"
       ]
     }
   ],
   "notifications": [
     {
       "id": 1,
-      "channel": "xyz",
+      "org_id": "1",
+      "channel": "udgama",
       "timeZone": "udgama",
       "weekly": {
-        "week": false,
-        "day": "Monday",
-        "time": "11:00 to 12:00"
+        "week": true,
+        "day": "saturday",
+        "time": "11:00"
       },
       "daily": {
-        "day": false,
-        "time": "11:00 to 12:00"
+        "day": true,
+        "time": "9:00"
       }
     }
   ],
   "billing": [
     {
       "id": 1,
-      "org_id": 1,
-      "company": "XYZ",
-      "email": "abc@gmail.com",
+      "org_id": "1",
+      "company": "abcd",
+      "email": "abcd@gmail.com",
       "city": "Thane",
       "country": "India",
-      "address": "xyz @ g",
-      "address2": "abc @ c",
-      "vat": "43746784744",
-      "coupon": "46fec78457",
-      "cardNumber": "57457243545",
-      "expiryDate": "02/2022"
+      "address": "TMC office",
+      "address2": "thane west",
+      "vat": "34353545",
+      "coupon": "554534525",
+      "cardNumber": "123",
+      "expiryDate": "02/23"
     }
   ]
 }

@@ -109,9 +109,8 @@ input GeneralSettings {
     month: String
     date: String
 }
-input Day {
-    id: ID!
-    day: String
+input SingleObject {
+    name: String
 }
 
 input WorkWeeks {
@@ -140,7 +139,47 @@ type LeaveType {
 input Export {
     id: ID!
     org_id: ID!
-    
+    reportType: String
+    status: String
+    startDate: String
+    endDate: String
+    teams: [String]
+
+}
+
+input Weekly {
+    week: Boolean
+    day: String
+    time: String
+}
+
+input Daily {
+    day: Boolean
+    time: String
+}
+
+input Notifications {
+    id: ID!
+    org_id: ID!
+    channel: String
+    timeZone: String
+    weekly: Weekly
+    daily: Daily
+}
+
+input BillingInfo {
+    id: ID!
+    org_id: ID!
+    company: String 
+    email: String
+    city: String
+    country: String
+    address: String
+    address2: String
+    vat: String
+    coupon: String
+    cardNumber: String
+    expiryDate: String
 }
 type Data {
     msg: String
@@ -175,7 +214,9 @@ type Mutation {
     addCustomLeaves(input: AddLeaveType): Data
     updategeneralSettings(input: GeneralSettings): Msg
     updateworkWeek(input: WorkWeeks): Msg
-    updateExport(input: )
+    updateexport(input: Export): Msg
+    updatebilling(input: BillingInfo): Msg
+    updatenotifications(input: Notifications): Msg
 }
 `
 
@@ -270,6 +311,18 @@ export const resolvers = {
     updateworkWeek(_, args) {
         console.log('workweek ', args.input);
         return userModel.updateWorkWeeks(args.input);
+    },
+    updateexport(_, args) {
+        console.log('workweek ', args.input.teams);
+        return userModel.updateExport(args.input);
+    },
+    updatebilling(_, args) {
+        console.log('workweek ', args.input);
+        return userModel.updateBilling(args.input);
+    },
+    updatenotifications(_, args) {
+        console.log('notifications', args.input);
+        return userModel.updateNotification(args.input);
     }
   }
 //  Mutation: {

@@ -217,6 +217,42 @@ class User {
           }
     }
 
+    async updateBilling(args) {
+        console.log('billing object ', args);
+        const data = await this.api.put(`/billing/${args.id}`, args);
+        console.log(data);
+          if (data.status === 200 ){
+              return {
+                  msg: "Billing details updated successfuly!",
+              }
+          }
+          return {
+              msg: "Something went wrong!"
+          }
+    }
+
+    async updateNotification(args) {
+        console.log('notification object ', args);
+        const data = await this.api.put(`/notifications/${args.id}`, {
+            id: args.id,
+            org_id: args.org_id,
+            reportType: args.reportType,
+            status: args.status,
+            startDate: args.startDate,
+            endDate: args.endDate,
+            teams: args.teams.split(',')
+        });
+        console.log(data);
+          if (data.status === 200 ){
+              return {
+                  msg: "Notification details updated successfuly!",
+              }
+          }
+          return {
+              msg: "Something went wrong!"
+          }
+    }
+
     async create(data) {
         console.log("My users data ", data);
         //data.friends = data.friends 
