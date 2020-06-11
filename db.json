@@ -512,28 +512,28 @@
   "leaveTypesPaid": [
     {
       "id": 1,
-      "name": "",
+      "name": "Paid Leave",
       "active": true,
       "DPY": 0,
-      "AR": "No"
+      "AR": "Yes"
     }
   ],
   "leaveTypesCustom": [
     {
       "id": 1,
-      "name": "Casual Leaves",
-      "active": false,
-      "type": "Casual Leaves",
+      "name": "Paid Leave123",
+      "active": true,
+      "type": "Paid Leave123",
       "DPY": 0,
-      "AR": "Yes",
+      "AR": "No",
       "RR": "No",
       "AHD": "No"
     },
     {
       "id": 2,
-      "name": "Sick day",
+      "name": "Diwali Vacation",
       "active": false,
-      "type": "Sick day",
+      "type": "Diwali Vacation",
       "DPY": 0,
       "AR": "Yes",
       "RR": "No",
@@ -541,33 +541,13 @@
     },
     {
       "id": 3,
-      "name": "diwali leave",
-      "active": false,
-      "type": "diwali leave",
-      "DPY": 2,
-      "AR": "Yes",
-      "RR": "No",
-      "AHD": "No"
-    },
-    {
-      "id": 4,
-      "name": "Diwali",
-      "active": false,
-      "type": "Diwali",
+      "name": "Eid Holidays",
+      "active": true,
+      "type": "Eid Holidays",
       "DPY": 0,
       "AR": "Yes",
       "RR": "No",
       "AHD": "No"
-    },
-    {
-      "name": "Pizza party",
-      "type": "Pizza party",
-      "active": true,
-      "DPY": 2,
-      "AR": "Yes",
-      "RR": "No",
-      "AHD": "No",
-      "id": 5
     }
   ],
   "holliday": [
@@ -596,6 +576,82 @@
           "date": "25/3/2021"
         }
       ]
+    }
+  ],
+  "generalsettings": [
+    {
+      "id": 1,
+      "org_id": "1",
+      "dateFormat": "YYYY/MM/DD",
+      "sendNotification": true,
+      "allowSlack": true,
+      "transfer": "Yes, all remaining days",
+      "daysExpire": true,
+      "month": "May",
+      "date": "1"
+    }
+  ],
+  "workweeks": [
+    {
+      "id": 1,
+      "org_id": "1",
+      "sunday": false,
+      "monday": true,
+      "tuesday": true,
+      "wednesday": true,
+      "thursday": true,
+      "friday": false,
+      "saturday": false
+    }
+  ],
+  "export": [
+    {
+      "id": 1,
+      "org_id": 1,
+      "reportType": "Leave history event",
+      "status": "Denied",
+      "startDate": "2020/06/02",
+      "endDate": "2021/05/31",
+      "teams": [
+        {
+            "name": "abc"
+        },
+        {
+            "name": "xyz"
+        }
+      ]
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "channel": "xyz",
+      "timeZone": "udgama",
+      "weekly": {
+        "week": false,
+        "day": "Monday",
+        "time": "11:00 to 12:00"
+      },
+      "daily": {
+        "day": false,
+        "time": "11:00 to 12:00"
+      }
+    }
+  ],
+  "billing": [
+    {
+      "id": 1,
+      "org_id": 1,
+      "company": "XYZ",
+      "email": "abc@gmail.com",
+      "city": "Thane",
+      "country": "India",
+      "address": "xyz @ g",
+      "address2": "abc @ c",
+      "vat": "43746784744",
+      "coupon": "46fec78457",
+      "cardNumber": "57457243545",
+      "expiryDate": "02/2022"
     }
   ]
 }

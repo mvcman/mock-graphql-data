@@ -27,12 +27,6 @@ type DateLabel {
     label: String
 }
 
-type GeneralSettings {
-    transferOptions: [Label]
-    months: [Label]
-    days: [DateLabel]
-    dateFormat: [Label]
-}
 type Leave {
     name: String
     image: String
@@ -104,6 +98,34 @@ input PaidLeaveType {
     AR: String
 }
 
+input GeneralSettings {
+    id: ID!
+    org_id: ID!
+    dateFormat: String
+    sendNotification: Boolean
+    allowSlack: Boolean
+    transfer: String
+    daysExpire: Boolean
+    month: String
+    date: String
+}
+input Day {
+    id: ID!
+    day: String
+}
+
+input WorkWeeks {
+    id: ID!
+    org_id: ID!
+    sunday: Boolean,
+    monday: Boolean
+    tuesday: Boolean,
+    wednesday: Boolean,
+    thursday: Boolean,
+    friday: Boolean,
+    saturday: Boolean
+}
+
 type LeaveType {
     id: ID!
     name: String
@@ -115,12 +137,18 @@ type LeaveType {
     AHD: String
 }
 
+input Export {
+    id: ID!
+    org_id: ID!
+    
+}
 type Data {
     msg: String
     data: LeaveType
 }
 type Query {
-    users(username: String): [User]
+    users: [User]
+    user(id: ID!): User
     persons: [Person]
     leaves: [Leave]
     transferOptions: [Label]
@@ -133,7 +161,6 @@ type Query {
     allcountry: [Label]
     channels: [Label]
     weekdays: [Label]
-    user(id: ID!): User
     holliday(id: ID!): Holy
     getLeave: [LeaveType],
     getPaidLeave: [LeaveType]
@@ -146,17 +173,18 @@ type Mutation {
     updateCustomLeave(input: CustomLeaveType): Msg
     updatePaidLeave(input: PaidLeaveType): Msg
     addCustomLeaves(input: AddLeaveType): Data
+    updategeneralSettings(input: GeneralSettings): Msg
+    updateworkWeek(input: WorkWeeks): Msg
+    updateExport(input: )
 }
 `
 
 export const resolvers = {
   Query: {
-    users(user) {
-        console.log(user);
+    users() {
         return userModel.userList()
     },
-    user(source, id) {
-        console.log(id);
+    user(_, id) {
         return userModel.singleUser(id)
     },
     persons: () => {
@@ -236,6 +264,13 @@ export const resolvers = {
         console.log(args.name, args.reason);
         return userModel.updatePaidLeave(args.input)
     },
+    updategeneralSettings(_, args) {
+        return userModel.updateGeneralSetttings(args.input);
+    },
+    updateworkWeek(_, args) {
+        console.log('workweek ', args.input);
+        return userModel.updateWorkWeeks(args.input);
+    }
   }
 //  Mutation: {
 //    createLeave(source, args) {
