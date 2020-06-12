@@ -540,14 +540,14 @@
       "AHD": "No"
     },
     {
-      "id": 3,
-      "name": "Eid Holidays",
+      "name": "Ganpati vacation",
+      "type": "Ganpati vacation",
       "active": true,
-      "type": "Eid Holidays",
-      "DPY": 0,
+      "DPY": 5,
       "AR": "Yes",
       "RR": "No",
-      "AHD": "No"
+      "AHD": "No",
+      "id": 4
     }
   ],
   "holliday": [
@@ -585,7 +585,7 @@
       "dateFormat": "YYYY/MM/DD",
       "sendNotification": true,
       "allowSlack": true,
-      "transfer": "Yes, all remaining days",
+      "transfer": "some",
       "daysExpire": true,
       "month": "January",
       "date": "2"
@@ -600,7 +600,7 @@
       "tuesday": true,
       "wednesday": true,
       "thursday": true,
-      "friday": false,
+      "friday": true,
       "saturday": false
     }
   ],
@@ -609,11 +609,11 @@
       "id": 1,
       "org_id": "1",
       "reportType": "Employee leave statuses",
-      "status": "Approved",
-      "startDate": "undefined",
-      "endDate": "undefined",
+      "status": "Approved & Denied",
+      "startDate": "2020-06-12",
+      "endDate": "2020-06-09",
       "teams": [
-        "Udgama,XYZ"
+        "XYZ,Udgama,Abc"
       ]
     }
   ],
