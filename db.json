@@ -514,8 +514,8 @@
       "id": 1,
       "name": "Paid Leave",
       "active": true,
-      "DPY": 0,
-      "AR": "Yes"
+      "DPY": 15,
+      "AR": "No"
     }
   ],
   "leaveTypesCustom": [
@@ -524,7 +524,7 @@
       "name": "Paid Leave123",
       "active": true,
       "type": "Paid Leave123",
-      "DPY": 0,
+      "DPY": 15,
       "AR": "No",
       "RR": "No",
       "AHD": "No"
@@ -609,11 +609,13 @@
       "id": 1,
       "org_id": "1",
       "reportType": "Employee leave statuses",
-      "status": "Approved",
-      "startDate": "undefined",
-      "endDate": "undefined",
+      "status": "Denied",
+      "startDate": "2020-06-12",
+      "endDate": "2020-06-12",
       "teams": [
-        "Udgama,XYZ"
+        "Udgama",
+        "XYZ",
+        "Abc"
       ]
     }
   ],
@@ -621,16 +623,16 @@
     {
       "id": 1,
       "org_id": "1",
-      "channel": "udgama",
-      "timeZone": "udgama",
+      "channel": "xyz",
+      "timeZone": "xyz",
       "weekly": {
-        "week": true,
-        "day": "saturday",
-        "time": "11:00"
+        "week": false,
+        "day": "Monday",
+        "time": "6:00"
       },
       "daily": {
         "day": true,
-        "time": "9:00"
+        "time": "7:00"
       }
     }
   ],

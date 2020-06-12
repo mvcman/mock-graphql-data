@@ -313,7 +313,7 @@ export const resolvers = {
         return userModel.updateWorkWeeks(args.input);
     },
     updateexport(_, args) {
-        console.log('workweek ', args.input.teams);
+        console.log('export ', `${args.input.teams}`);
         return userModel.updateExport(args.input);
     },
     updatebilling(_, args) {
