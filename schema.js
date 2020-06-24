@@ -27,7 +27,8 @@ type DateLabel {
     label: String
 }
 
-type Leave {
+input InputProfileLeave {
+    id: ID!
     name: String
     image: String
     badgeName: String
@@ -39,6 +40,22 @@ type Leave {
     approvername: String
     apshort: String
     org: String 
+    status: String
+}
+type Leave {
+    id: ID!
+    name: String
+    image: String
+    badgeName: String
+    count: Int
+    from: String
+    to: String
+    reason: String
+    badgename1: String
+    approvername: String
+    apshort: String
+    org: String 
+    status: String
 }
 input CreateUserInput {
     id: Int
@@ -204,6 +221,7 @@ type Query {
     getLeave: [LeaveType],
     getPaidLeave: [LeaveType]
     deleteLeave(id: ID!): Msg
+    deleteprofileLeave(id: ID!): Msg
 }
 
 type Mutation {
@@ -217,6 +235,7 @@ type Mutation {
     updateexport(input: Export): Msg
     updatebilling(input: BillingInfo): Msg
     updatenotifications(input: Notifications): Msg
+    updateprofileLeave(input: InputProfileLeave): Msg
 }
 `
 
@@ -281,6 +300,9 @@ export const resolvers = {
     },
     deleteLeave(source, args) {
         return userModel.deleteLeave(args);
+    },
+    deleteprofileLeave(source, args) {
+        return userModel.deleteProfileLeave(args);
     }
   },
 
@@ -313,7 +335,7 @@ export const resolvers = {
         return userModel.updateWorkWeeks(args.input);
     },
     updateexport(_, args) {
-        console.log('workweek ', args.input.teams);
+        console.log('export ', `${args.input.teams}`);
         return userModel.updateExport(args.input);
     },
     updatebilling(_, args) {
@@ -323,6 +345,10 @@ export const resolvers = {
     updatenotifications(_, args) {
         console.log('notifications', args.input);
         return userModel.updateNotification(args.input);
+    },
+    updateprofileLeave(_, args) {
+        console.log('update profile leave status', args.input);
+        return userModel.updateProfileLeave(args.input);
     }
   }
 //  Mutation: {

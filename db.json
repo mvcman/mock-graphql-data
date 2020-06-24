@@ -333,27 +333,116 @@
   ],
   "leaves": [
     {
+      "id": 1,
       "image": "/avatars/avatar_11.png",
+      "badgeName": "Paid time off",
+      "name": "Snehal Narkar123",
+      "count": 4,
+      "from": "June 20, 2020",
+      "to": "June 25, 2020",
+      "reason": "sample",
+      "approvername": "Pradnya Dalvi",
+      "org": "xyz",
+      "status": "denied"
+    },
+    {
+      "id": 3,
+      "name": "Snehal Narkar",
+      "image": "/avatars/avatar_11.png",
+      "badgeName": "Paid time off",
+      "count": 4,
+      "from": "June 22, 2020",
+      "to": "June 23, 2020",
+      "reason": "sample",
+      "badgename1": "Paid time off",
+      "approvername": "Pradnya Dalvi",
+      "apshort": "undefined",
+      "org": "xyz",
+      "status": "denied"
+    },
+    {
+      "id": 4,
+      "image": "/avatars/avatar_11.png",
+      "badgeName": "Paid time off",
+      "name": "Snehal Narkar123",
+      "count": 4,
+      "from": "June 20, 2020",
+      "to": "June 25, 2020",
+      "reason": "sample",
+      "approvername": "Pradnya Dalvi",
+      "org": "xyz",
+      "status": "approved"
+    },
+    {
+      "id": 6,
+      "name": "Snehal Narkar",
+      "image": "/avatars/avatar_11.png",
+      "badgeName": "Paid time off",
+      "count": 4,
+      "from": "June 22, 2020",
+      "to": "June 23, 2020",
+      "reason": "sample",
+      "badgename1": "Paid time off",
+      "approvername": "Pradnya Dalvi",
+      "apshort": "undefined",
+      "org": "xyz",
+      "status": "denied"
+    },
+    {
+      "id": 7,
+      "image": "/avatars/avatar_11.png",
+      "badgeName": "Paid time off",
+      "name": "Snehal Narkar123",
+      "count": 4,
+      "from": "June 20, 2020",
+      "to": "June 25, 2020",
+      "reason": "sample",
+      "approvername": "Pradnya Dalvi",
+      "org": "xyz",
+      "status": "approved"
+    },
+    {
+      "id": 9,
+      "name": "Peter Laery",
+      "image": "/avatars/avatar_1.png",
+      "badgeName": "Paid time off",
+      "count": 4,
+      "from": "June 26, 2020",
+      "to": "June 27, 2020",
+      "reason": "sample",
+      "badgename1": "Paid time off",
+      "approvername": "Pradnya Dalvi",
+      "apshort": "undefined",
+      "org": "xyz",
+      "status": "approved"
+    },
+    {
+      "id": 10,
+      "image": "/avatars/avatar_10.png",
       "badgeName": "Paid time off",
       "name": "Snehal Narkar",
       "count": 4,
-      "from": "December 2, 2019",
-      "to": "December 5, 2019",
+      "from": "February 20, 2022",
+      "to": "February 25, 2022",
       "reason": "sample",
-      "approvername": "Pradnya Dalvi",
-      "org": "xyz"
+      "approvername": "Pradnya D",
+      "org": "xyz",
+      "status": null
     },
     {
-      "image": "/avatars/avatar_2.png",
-      "badgeName": "Sick Leave",
-      "name": "Pradnya Dalvi",
+      "id": 12,
+      "name": "Mandar Waghe",
+      "image": "/avatars/avatar_11.png",
+      "badgeName": "Paid time off",
       "count": 4,
-      "from": "December 12, 2019",
-      "to": "December 15, 2019",
-      "reason": "Not well",
-      "approvername": "Snehal Narkar",
-      "apshort": "SN",
-      "org": "udgama"
+      "from": "June 22, 2021",
+      "to": "June 23, 2021",
+      "reason": "sample",
+      "badgename1": "Paid time off",
+      "approvername": "Shreya G",
+      "apshort": "undefined",
+      "org": "xyz",
+      "status": null
     }
   ],
   "people": [
@@ -515,7 +604,7 @@
       "name": "Paid Leave",
       "active": true,
       "DPY": 0,
-      "AR": "Yes"
+      "AR": "No"
     }
   ],
   "leaveTypesCustom": [
@@ -525,7 +614,7 @@
       "active": true,
       "type": "Paid Leave123",
       "DPY": 0,
-      "AR": "No",
+      "AR": "Yes",
       "RR": "No",
       "AHD": "No"
     },
@@ -534,20 +623,20 @@
       "name": "Diwali Vacation",
       "active": true,
       "type": "Diwali Vacation",
-      "DPY": 6,
-      "AR": "Yes",
+      "DPY": 0,
+      "AR": "No",
       "RR": "No",
       "AHD": "No"
     },
     {
+      "id": 4,
       "name": "Ganpati vacation",
-      "type": "Ganpati vacation",
       "active": true,
-      "DPY": 5,
+      "type": "Ganpati vacation",
+      "DPY": 0,
       "AR": "Yes",
       "RR": "No",
-      "AHD": "No",
-      "id": 4
+      "AHD": "No"
     }
   ],
   "holliday": [
@@ -595,7 +684,7 @@
     {
       "id": 1,
       "org_id": "1",
-      "sunday": false,
+      "sunday": true,
       "monday": true,
       "tuesday": true,
       "wednesday": true,
@@ -609,11 +698,12 @@
       "id": 1,
       "org_id": "1",
       "reportType": "Employee leave statuses",
-      "status": "Approved & Denied",
+      "status": "Denied",
       "startDate": "2020-06-12",
-      "endDate": "2020-06-09",
+      "endDate": "2020-06-12",
       "teams": [
-        "XYZ,Udgama,Abc"
+        "Udgama",
+        "Abc"
       ]
     }
   ],
@@ -621,16 +711,16 @@
     {
       "id": 1,
       "org_id": "1",
-      "channel": "udgama",
-      "timeZone": "udgama",
+      "channel": "xyz",
+      "timeZone": "xyz",
       "weekly": {
         "week": true,
-        "day": "saturday",
-        "time": "11:00"
+        "day": "Monday",
+        "time": "5:00"
       },
       "daily": {
         "day": true,
-        "time": "9:00"
+        "time": "8:00"
       }
     }
   ],
@@ -638,16 +728,16 @@
     {
       "id": 1,
       "org_id": "1",
-      "company": "abcd",
-      "email": "abcd@gmail.com",
-      "city": "Thane",
+      "company": "meagad",
+      "email": "waghemandar1712@gmail.com",
+      "city": "Thane, Maharashtra, India",
       "country": "India",
-      "address": "TMC office",
-      "address2": "thane west",
-      "vat": "34353545",
-      "coupon": "554534525",
-      "cardNumber": "123",
-      "expiryDate": "02/23"
+      "address": "Dada patil wadi mundekar chawl naupada road thane(W)",
+      "address2": "Dada patil wadi mundekar chawl naupada road thane(W)",
+      "vat": "53454336",
+      "coupon": "fdsf5345",
+      "cardNumber": "243",
+      "expiryDate": "02/32"
     }
   ]
 }
